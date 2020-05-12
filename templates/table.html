@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ table.title }}</h1>
+    <div class="tbl-page">
+    <img src="../static/img/{{ table.type }}/{{ table.deck }}-{{ table.legs }}.jpg"
+         width="800" height="600" alt="Ошибка 404">
+    <p class="tbl-pg-price">{{ table.cost }} Песет</p>
+    <p class="tbl-pg-descr">{{ table.description }}</p>
+    <p>{{ form.add_to_cart(type="submit", class="btn btn-primary") }}</p>
+    </div>
+    <p>Другие варианты:</p>
+    {% for var in vars %}
+        <a href="/{{ var.type }}/{{ var.deck }}-{{ var.legs }}">
+        <div class="variations">
+            <img src="../static/img/{{ var.type }}/{{ var.deck }}-{{ var.legs }}.jpg"
+                 width="200" height="150" alt="Ошибка 404">
+            <p>{{ var.cost }}</p>
+        </div>
+        </a>
+    {% endfor %}
+{% endblock %}

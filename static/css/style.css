@@ -1,0 +1,45 @@
+.header {
+    background-color: limegreen;
+    text-align: justify;
+    letter-spacing: 1px;
+    height: 8em;
+    padding: 2em 10%;
+    color: aliceblue;
+}
+
+
+.footer {
+    background-color: gray;
+    color: aliceblue;
+}
+
+.table_in_catalog {
+    background: antiquewhite;
+    outline: 2px solid #000;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+
+.navbar {
+    color: aliceblue;
+}
+
+.navbar:hover {
+    color: white;
+}
+
+.navbar:visited {
+    color: aliceblue;
+}
+
+.table_link {
+    color: brown;
+}
+
+.table_link:visited {
+    color: chocolate;
+}
+
+.table_link:hover {
+    color: limegreen;
+}

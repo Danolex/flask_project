@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+{% for table in tables %}
+    {% if table.in_catalog %}
+        <a class="table_link" href="/{{ table.type }}/{{ table.deck }}-{{ table.legs }}">
+        <div class="table_in_catalog">
+        <img src="../static/img/{{ table.type }}/{{ table.deck }}-{{ table.legs }}.jpg" alt="Not found"
+        height="100" width="150" align="left">
+        <p class="description">{{ table.description }}</p>
+        <p class="price">{{ table.cost }} Песет</p>
+        <br>
+        </div>
+        </a>
+    {% endif %}
+{% endfor %}
+{% endblock %}

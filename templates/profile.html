@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if current_user.is_admin %}
+        <p>Администратор</p>
+    {% endif %}
+    <p>Имя: {{current_user.name}}</p>
+    <p>Email: {{ current_user.email }}</p>
+    <p>Дата регистрации: {{ current_user.created_date }}</p>
+{% endblock %}
